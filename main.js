@@ -6,6 +6,13 @@ async function translate(text, from, to, options) {
     const {ResponseType} = http;
 
     const doi = text.trim();
+    if (!doi) {
+        throw new Error("DOI cannot be empty");
+    }
+    if (!/^\d{4}\/\S+$/.test(doi)) {
+        throw new Error("Invalid DOI format");
+    }
+
     const url = `https://api.crossref.org/works`;
     const fullUrl = `${url}/${doi}/transform/application/x-bibtex`;
     const res = await fetch(fullUrl, 

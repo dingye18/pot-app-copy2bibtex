@@ -1,7 +1,7 @@
 {
   "id": "plugin.com.pot-app.copy2bibtex",
   "plugin_type": "translate",
-  "icon": "lingva.svg",
+  "icon": "crossref.png",
   "display": "Copy2BibTeX",
   "homepage": "https://github.com/dingye18/pot-app-copy2bibtex",
   "needs": [],
